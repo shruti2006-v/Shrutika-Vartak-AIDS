@@ -1,0 +1,66 @@
+//Code:
+
+class Calculator {
+    // Attributes (for demonstration in parameterized constructor)
+    int num1, num2;
+
+    // Default Constructor (Constructor Overloading)
+    Calculator() {
+        System.out.println("Welcome to Calculator!");
+    }
+
+    // Parameterized Constructor (Constructor Overloading)
+    Calculator(int a, int b) {
+        num1 = a;
+        num2 = b;
+        int sum = num1 + num2;
+        System.out.println("Sum of " + num1 + " and " + num2 + " is: " + sum);
+    }
+
+    // Method Overloading: add() with no parameters
+    void add() {
+        int a = 5, b = 10;
+        int sum = a + b;
+        System.out.println("Sum of default numbers " + a + " and " + b + " is: " + sum);
+    }
+
+    // Method Overloading: add() with two integer parameters
+    void add(int a, int b) {
+        int sum = a + b;
+        System.out.println("Sum of " + a + " and " + b + " is: " + sum);
+    }
+
+    // Method Overloading: add() with three float parameters
+    void add(float a, float b, float c) {
+        float sum = a + b + c;
+        System.out.println("Sum of " + a + ", " + b + " and " + c + " is: " + sum);
+    }
+}
+
+public class experiment2 {
+    public static void main(String[] args) {
+        // Using default constructor
+        Calculator calc1 = new Calculator();
+
+        // Using parameterized constructor
+        Calculator calc2 = new Calculator(15, 25);
+
+        // Demonstrating method overloading
+        calc1.add();                    // No parameters
+        calc1.add(20, 30);              // Two integers
+        calc1.add(12.5f, 15.5f, 10.0f); // Three floats
+    }
+}
+
+
+//Output:
+
+PS C:\Users\91788\Downloads\java>  & 'C:\Program Files\Java\jdk-24\bin\java.exe' '--enable-preview' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\91788\AppData\Roaming\Code\User\workspaceStorage\f5fa97c5fc5359ad7a9244a856664d07\redhat.java\jdt_ws\java_deb43c15\bin' 'experiment2'
+Welcome to Calculator!
+Sum of 15 and 25 is: 40
+Sum of default numbers 5 and 10 is: 15
+Sum of 20 and 30 is: 50
+Sum of 12.5, 15.5 and 10.0 is: 38.0
+PS C:\Users\91788\Downloads\java>
+
+
